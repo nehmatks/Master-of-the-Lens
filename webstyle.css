@@ -1,0 +1,225 @@
+/* General colour scheme and variables:
+   dark blue (background): #0d1b2a
+   navy blue (sections): #1b263b
+   gold (headers/accents): #c5a059
+   dark red (buttons/hover): #8b0000
+   off-white (text): #e0e1dd */
+
+/* General reset and base styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #0d1b2a;
+    color: #e0e1dd;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Typography and headings */
+h1, h2, h3 {
+    font-family: "Playfair Display", "Times New Roman", Times, serif;
+    color: #c5a059;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1.5rem; /* Space between paragraphs */
+}
+
+/* Links inside paragraphs */
+p a {
+    color: #c5a059;
+    text-decoration: underline; 
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+p a:hover {
+    color: #8b0000; /* Change colour to red when hovering over link */
+}
+
+/* Page header area with background image */
+header {
+    background-color: #1b263b;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 3px solid #c5a059;
+    padding: 100px 20px;
+    text-align: center;
+    background-blend-mode: overlay;
+}
+
+/* Sticky navigation menu */
+nav {
+    background-color: #08111a;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    text-align: center;
+    border-bottom: 1px solid #1b263b;
+}
+
+/* Navigation bar item styling */
+nav a {
+    color: #c5a059;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #8b0000; /* Change colour to red when hovering over navigation item */
+}
+
+/* Main content container */
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Footer area with contact info styling */
+footer {
+    background-color: #08111a;
+    color: #c5a059;
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 2px solid #8b0000;
+}
+
+/* Reusable section blocks */
+section {
+    background-color: #1b263b;
+    padding: 40px;
+    margin-bottom: 40px;
+    border-radius: 4px;
+    border-top: 4px solid #8b0000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+/* Images styling */
+figure {
+    margin: 30px 0;
+    text-align: center;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #c5a059;
+    display: block;
+}
+
+/* Image caption styling */
+figcaption {
+    margin-top: 12px;
+    font-size: 0.9rem;
+}
+
+figcaption a {
+    color: #c5a059;
+    text-decoration: underline;
+    font-style: italic;
+    transition: color 0.3s;
+}
+
+figcaption a:hover { 
+    color: #8b0000; /* Change colour to red when hovering over link */
+}
+
+/* Alternating layout rows for images and paragraphs */
+.content-row {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.row-reverse {
+    flex-direction: row-reverse; /* Make image on the right and paragraph on the left */
+}
+
+.content-column {
+    flex: 1;
+    min-width: 300px;
+}
+
+
+.content-column p {
+    text-align: justify; /* Align text to both left and right edges */
+}
+
+.content-column figure {
+    margin: 0;
+}
+
+/* Three column poster layout for filmography page */
+.poster-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.poster-item {
+    flex: 1;
+    text-align: center;
+}
+
+.poster-item img {
+    width: 100%;       
+    height: 450px;     
+    object-fit: cover; 
+    border: 2px solid #c5a059;
+    display: block;
+    transition: transform 0.3s; /* Make the movie poster take 0.3s to get bigger for a smoother look*/
+}
+
+/* Make the movie posters get bigger when you hover on them on filmography page */
+.poster-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Blocks for individual movie sections on filmography page */
+.movie-block {
+    border-top: 2px solid #8b0000;
+    padding-top: 50px;
+    margin-top: 80px;
+    scroll-margin-top: 80px;
+}
+
+/* Styled box for movie quotes on filmography page */
+.quote-box {
+    background-color: #08111a;
+    border-left: 5px solid #c5a059;
+    padding: 20px;
+    margin: 30px 0;
+    font-style: italic;
+    font-size: 1.2rem;
+}
+
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 600px) {
+    nav a {
+        display: block;
+        padding: 10px 0;
+    }
+    header {
+        padding: 30px 10px;
+    }
+    .poster-row {
+        flex-direction: column;
+    }
+}
