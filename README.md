@@ -1,5 +1,6 @@
 Master of the Lens: A Martin Scorsese Filmography
-\n This repository contains a project I made for my web design class that explores the filmography of Martin Scorsese. 
+
+This repository contains a project I made for my web design class that explores the filmography of Martin Scorsese. 
 (Note: To follow academic integrity guidelines, I kept this project local during the semester and waited until the course was finished to upload it to GitHub.)
 
 Movies have always been a big part of my life. They're one of the prominent ways that I connect with my family and have been a huge influence on how I've learnt about and perceived the world around me. My appreciation for film really solidified one afternoon after school, when I happened to watch Goodfellas. 
